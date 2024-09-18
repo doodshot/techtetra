@@ -1,0 +1,45 @@
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url(../asset/selmi_background.jpeg);
+        background-size: auto;
+        display: flex;
+        flex-direction: column;   /* Layout a colonna per body */
+        justify-content: center;  /* Centra verticalmente il contenuto */
+        align-items: center;      /* Centra orizzontalmente il contenuto */
+        height: 100vh;            /* Altezza completa della pagina */
+        margin: 0;
+    }
+
+    p {
+        padding: 20px;
+        color: #fff;
+        text-align: center;       /* Centra il testo */
+    }
+
+    img {
+        width: 394px;
+        height: 132px;
+    }
+
+    #main {
+        flex: 1;                 /* Fa sì che il main occupi lo spazio necessario */
+        text-align: center;
+        
+    }
+
+    footer {
+        width: 100%;             /* Il footer occupa l'intera larghezza */
+        text-align: right;        /* Allinea il testo a destra */
+        padding: 10px 20px;       /* Padding interno del footer */
+        color: #fff;
+        position: relative;
+    }
+    footer a {
+        color: #fff;
+        padding: 24px;
+        padding-bottom: 50px;
+    }
+    footer a:hover{
+        color: #25344D;
+    }
+}
