@@ -1,19 +1,21 @@
 @media only screen and (max-width: 768px) {
     body {
+        font-family: 'Dosis', sans-serif;
         background-image: url(../asset/selmi_background.jpeg);
         background-size: auto;
         display: flex;
-        flex-direction: column;   /* Layout a colonna per body */
-        justify-content: center;  /* Centra verticalmente il contenuto */
-        align-items: center;      /* Centra orizzontalmente il contenuto */
-        height: 100vh;            /* Altezza completa della pagina */
+        justify-content: center;  /* Centra orizzontalmente */
+        align-items: center;      /* Centra verticalmente */
+        height: 100vh;            /* Altezza completa della viewport */
         margin: 0;
     }
 
     p {
         padding: 20px;
         color: #fff;
-        text-align: center;       /* Centra il testo */
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 700; /* Peso grassetto */
     }
 
     img {
@@ -22,9 +24,7 @@
     }
 
     #main {
-        flex: 1;                 /* Fa sì che il main occupi lo spazio necessario */
-        text-align: center;
-        
+        text-align: center;       /* Centra il testo all'interno */
     }
 
     footer {
@@ -32,14 +32,19 @@
         text-align: right;        /* Allinea il testo a destra */
         padding: 10px 20px;       /* Padding interno del footer */
         color: #fff;
-        position: relative;
+        position: absolute;       /* Posizionamento fisso in fondo alla pagina */
+        bottom: 0;
+        margin-bottom: 20px;
     }
-    footer a {
+    footer a{
         color: #fff;
-        padding: 24px;
-        padding-bottom: 50px;
+        padding: 10px;
+        border: solid 2px #fff;
+        border-radius: 18px;
     }
     footer a:hover{
+        border: solid 2px #25344D;
         color: #25344D;
+        border-radius: 18px;
     }
 }
