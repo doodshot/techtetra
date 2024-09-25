@@ -1,0 +1,61 @@
+        @media only screen and (max-width: 768px) {
+            #languageSelector {
+                position: fixed;  
+                top: 20px;
+                right: 20px;
+                z-index: 1000;    
+                padding: 8px 12px;
+                font-family: 'Dosis', sans-serif;
+                font-size: 16px;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0);  
+                border: 2px solid #fff;
+                border-radius: 50px;
+                cursor: pointer;
+                outline: none;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+        
+            #languageSelector:hover {
+                color: #6180b6;
+                border: 2px solid #6180b6;
+                text-align: center;
+            }
+
+            body {
+                background-color: #25344D;
+            }
+
+        #logoSelmi {
+            height: 100px;
+            display: block;
+            margin-top: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+          }
+          
+          .btn {
+            margin-top: 10px;
+            width: 200px; /* o la larghezza desiderata */
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+            color: white;
+            background-color: #466292;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+          }
+
+          .btn:hover {
+            background-color: #6180b6;
+            color: #fff;
+          }
+        }
