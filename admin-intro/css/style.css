@@ -24,7 +24,7 @@
     }
     body {
         font-family: 'Dosis', sans-serif;
-        background-image: url(../asset/selmi_background.jpeg);
+        background-image: url(../../asset/selmi_background.jpeg);
         background-size: auto;
         display: flex;
         justify-content: center;  /* Centra orizzontalmente */

@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techtetra</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
         <select id="languageSelector">
-            <option value="it"> IT</option>
-            <option value="en"> EN</option>
+            <option value="it"> IT </option>
+            <option value="en"> EN </option>
             <option value="fr"> FR</option>
+            <option value="dt"> DT</option>
+            <option value="es"> ES</option>
+            <option value="ch"> CH</option>
+            <option value="ru"> RU</option>
+            <option value="tk"> TK</option>
         </select>
     </header>
     <!-- Inserimento logo e scan QR Code -->
     <div id="main"> 
-        <img src="asset/logoSelmi.png" alt="logo-selmi">
-        <div class="testo">
-            <p>
+        <img src="../asset/logoSelmi.png" alt="logo-selmi">
+        <div >
+            <p class="testo">
                 Devi prima scansionare il QR Code
             </p>
         </div>
@@ -30,10 +34,10 @@
 
     <!-- Footer dove inserire il link per login amministratore-->
     <footer>
-        <a href="admin-login.html" > 
+        <a href="../admin-login.html" id="admin-login"> 
             Sei un amministratore?   
         </a>
     </footer> 
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
 </body>
 </html> 
