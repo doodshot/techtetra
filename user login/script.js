@@ -1,30 +1,54 @@
-function createSlider(sliderId, navId) {
-    const slider = document.getElementById(sliderId);
-    const nav = document.getElementById(navId);
-    const images = slider.getElementsByTagName('img');
-    let currentIndex = 0;
-
-    // Crea i pulsanti di navigazione
-    for (let i = 0; i < images.length; i++) {
-        const button = document.createElement('button');
-        button.addEventListener('click', () => goToSlide(i));
-        nav.appendChild(button);
+document.getElementById('languageSelector').addEventListener('change', function() {
+    const language = this.value;
+    const textElement = document.getElementById('Qr-user');
+    const adminLink = document.getElementById('submit-button');
+  
+    if (language === 'it') {
+      textElement.textContent = 'Vuoi scansionare nuovamente il QR?';
+      adminLink.textContent = 'Invia';
+    } else if (language === 'en') {
+      textElement.textContent = 'You need to scan the QR code again';
+      adminLink.textContent = 'submit';
+    } else if (language === 'fr') {
+      textElement.textContent = 'Vous devez scanner à nouveau le code QR';
+      adminLink.textContent = 'Envoyer';
     }
-
-    function goToSlide(index) {
-        currentIndex = index;
-        slider.style.transform = `translateX(-${index * 100}%)`;
-        updateNav();
+    else if(language === 'es') {
+        textElement.textContent = 'Debes escanear el código QR de nuevo';
+        adminLink.textContent = 'Enviar';
     }
-
-    function updateNav() {
-        Array.from(nav.children).forEach((button, index) => {
-            button.classList.toggle('active', index === currentIndex);
-        });
+    else if(language === 'ru') 
+    {
+        textElement.textContent = 'Сначала вам нужно сканировать QR код';
+        adminLink.textContent = 'Отправить';
     }
+    else if(language === 'ch')
+    {
+        textElement.textContent = '您需要再次扫描二维码';
+        adminLink.textContent = '发送';
+    }
+    else if(language === 'dt')
+    {
+        textElement.textContent = 'Sie müssen den QR-Code erneut scannen';
+        adminLink.textContent = 'Senden';
+    }
+    else if(language === 'tk')
+    {
+      textElement.textContent = 'QR kodunu yeniden taramanız gerekiyor';
+      adminLink.textContent = 'Gönder';
+    }
+  });
 
-    updateNav();
-}
+  var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  autoPlay: 1500 
+});
 
-createSlider('slider1', 'nav1');
-createSlider('slider2', 'nav2');
+// element argument can be a selector string
+//   for an individual element
+var flkty = new Flickity( '.main-carousel', {
+  // options
+});

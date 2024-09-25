@@ -4,52 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina di Login - Selmi Group</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images (1).png" alt="Logo Selmi Group">
+            <img id="logo-selmi" src="../asset/selmi-logo-mini.png" alt="logo-selmi">
         </div>
-        <select class="language-selector">
-            <option value="it">Italiano</option>
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
-            <option value="ru">Русский</option>
-            <option value="sp">Español</option>
-            <option value="pt">Português</option>
-            <option value="ch">中文</option>
+        <select id="languageSelector">
+            <option value="it"> IT </option>
+            <option value="en"> EN </option>
+            <option value="fr"> FR</option>
+            <option value="dt"> DT</option>
+            <option value="es"> ES</option>
+            <option value="ch"> CH</option>
+            <option value="ru"> RU</option>
+            <option value="tk"> TK</option>
         </select>
     </header>
 
-    <div class="image-container">
-        <div class="image-box">
-            <div class="slider" id="slider1">
-                <img src="selmi_slide_1.jpg" alt="Immagine 1">
-                <img src="selmi_slide_2.jpg" alt="Immagine 2">
-                <img src="selmi_slide_3.jpg" alt="Immagine 3">
-            </div>
-            <div class="slider-nav" id="nav1"></div>
-        </div>
-        <div class="image-box">
-            <div class="slider" id="slider2">
-                <img src="selmi_slide_4.jpg" alt="Immagine 4">
-                <img src="selmi_slide_5.jpg" alt="Immagine 5">
-            </div>
-            <div class="slider-nav" id="nav2"></div>
-        </div>
-    </div>
+
+
+    <div class="main-carousel">
+        <div class="carousel-cell"><img src="../asset/selmi_slide_1.jpg" alt="Immagine 1"></div>
+        <div class="carousel-cell"><img src="../asset/selmi_slide_2.jpg" alt="Immagine 2"></div>
+        <div class="carousel-cell"><img src="../asset/selmi_slide_3.jpg" alt="Immagine 3"></div>
+        <div class="carousel-cell"><img src="../asset/selmi_slide_4.jpg" alt="Immagine 4"></div>
+    <div class="carousel-cell"><img src="../asset/selmi_slide_5.jpg" alt="Immagine 5"></div>
+  </div>
 
     <div class="input-container">
         <input type="text" class="input-field" placeholder="Inserisci l'anno di acquisto">
-        <button class="submit-button">Invia</button>
+        <button class="submit-button" id="submit-button">Invia</button>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="Qr-user">
         <p>Vuoi scansionare nuovamente il QR?</p>
     </div>
 
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
