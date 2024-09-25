@@ -22,6 +22,9 @@
                 border: 2px solid #6180b6;
                 text-align: center;
             }
+            option{
+                color: #25344D;
+            }
 
             body {
                 background-color: #25344D;
