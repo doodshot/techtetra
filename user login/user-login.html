@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di Login - Selmi Group</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images (1).png" alt="Logo Selmi Group">
+        </div>
+        <select class="language-selector">
+            <option value="it">Italiano</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ru">Русский</option>
+            <option value="sp">Español</option>
+            <option value="pt">Português</option>
+            <option value="ch">中文</option>
+        </select>
+    </header>
+
+    <div class="image-container">
+        <div class="image-box">
+            <div class="slider" id="slider1">
+                <img src="selmi_slide_1.jpg" alt="Immagine 1">
+                <img src="selmi_slide_2.jpg" alt="Immagine 2">
+                <img src="selmi_slide_3.jpg" alt="Immagine 3">
+            </div>
+            <div class="slider-nav" id="nav1"></div>
+        </div>
+        <div class="image-box">
+            <div class="slider" id="slider2">
+                <img src="selmi_slide_4.jpg" alt="Immagine 4">
+                <img src="selmi_slide_5.jpg" alt="Immagine 5">
+            </div>
+            <div class="slider-nav" id="nav2"></div>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <input type="text" class="input-field" placeholder="Inserisci l'anno di acquisto">
+        <button class="submit-button">Invia</button>
+    </div>
+
+    <div class="footer">
+        <p>Vuoi scansionare nuovamente il QR?</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
