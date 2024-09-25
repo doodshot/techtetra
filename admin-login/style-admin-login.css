@@ -1,0 +1,138 @@
+@media only screen and (max-width: 768px) {
+    #logo-selmi {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: auto;
+        height: 40px; /* Altezza simile a languageSelector */
+    }
+
+    #languageSelector {
+        position: fixed;  
+        top: 20px;
+        right: 20px;
+        z-index: 1000;    
+        padding: 8px 12px;
+        font-family: 'Dosis', sans-serif;
+        font-size: 16px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0);  
+        border: 2px solid #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        transition: all 0.3s ease;
+        height: 40px; /* Assicuriamo che l'altezza sia coerente */
+        box-sizing: border-box; /* Include padding e bordo nell'altezza */
+    }
+
+    #languageSelector:hover {
+        color: #6180b6;
+        border: 2px solid #6180b6;
+        text-align: center;
+    }
+    option{
+        color: #25344D;
+    }
+    body {
+        font-family: 'Dosis', sans-serif;
+        /* Rimozione dell'immagine di sfondo e aggiunta di un colore di sfondo solido */
+        background-color: #25344D; /* Puoi cambiare questo colore con quello che preferisci */
+        background-size: auto;
+        display: flex;
+        justify-content: center;  /* Centra orizzontalmente */
+        align-items: center;      /* Centra verticalmente */
+        height: 100vh;            /* Altezza completa della viewport */
+        margin: 0;
+    }
+    p {
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 700; /* Peso grassetto */
+    }
+
+    img {
+        width: 394px;
+        height: 132px;
+    }
+
+    #login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    #login img {
+        width: 283px;
+        height: 283px;
+        margin-bottom: 24px;
+    }
+
+    #login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 283px;
+    }
+
+    #login-form input,
+    #login-form button {
+        width: 100%;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #FFFFFF;
+        background-color: #466292;
+        color: #AEAEAE;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #login-form input:focus,
+    #login-form input:not(:placeholder-shown) {
+        color: #FFFFFF;
+    }
+
+    #login-form input::placeholder {
+        color: #AEAEAE;
+    }
+
+    #login-form button {
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        color: #FFFFFF;
+    }
+
+    #login-form button:hover {
+        background-color: #25344D;
+    }
+
+    #forgot-password {
+    margin-top: 24px;
+    color: #FFFFFF;
+    }
+
+    footer {
+        width: 100%;             /* Il footer occupa l'intera larghezza */
+        text-align: right;        /* Allinea il testo a destra */
+        padding: 10px 20px;       /* Padding interno del footer */
+        color: #fff;
+        position: absolute;       /* Posizionamento fisso in fondo alla pagina */
+        bottom: 0;
+        margin-bottom: 20px;
+    }
+    footer a{
+        color: #fff;
+        padding: 10px;
+        border: solid 2px #fff;
+        border-radius: 18px;
+    }
+    footer a:hover{
+        border: solid 2px #25344D;
+        color: #25344D;
+        border-radius: 18px;
+    }
+}
