@@ -9,7 +9,7 @@
 
 @media only screen and (max-width: 768px) {
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Dosis', sans-serif;
         margin: 0;
         padding: 0;
         background-color: var(--bs-selmi-600);
@@ -41,6 +41,9 @@
         color: #25344D;
         border: 2px solid #25344D;
         text-align: center;
+    }
+    option{
+        color: #25344D;
     }
 
     header {
