@@ -1,0 +1,56 @@
+@media screen and (max-width: 768px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #25344D;
+        color: white;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .logo-image {
+        width: auto;
+        height: 50px;
+        margin-bottom: 20px;
+        object-fit: contain;
+    }
+
+    h1 {
+        margin: 10px 0 20px;
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    .file-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    .file-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid #34495e;
+    }
+
+    .file-icon {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .file-name {
+        flex-grow: 1;
+    }
+
+    .delete-icon {
+        color: #bdc3c7;
+        font-size: 20px;
+    }
+}
+

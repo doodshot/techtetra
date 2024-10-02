@@ -1,0 +1,95 @@
+@media only screen and (max-width: 768px) {
+    
+    body {
+        font-family: 'Dosis', sans-serif;
+        background-color: #25344D;
+        background-size: auto;
+        display: flex;
+        justify-content: center;  /* Centra orizzontalmente */
+        align-items: center;      /* Centra verticalmente */
+        height: 100vh;            /* Altezza completa della viewport */
+        margin: 0;
+    }
+
+    p, #backToHome {
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 700; /* Peso grassetto */
+    }
+
+    img {
+        max-width: 50%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #completionMessage {
+        display: none; /* Inizialmente nascosto */
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    #backToHome {
+        display: none; /* Inizialmente nascosto */
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 10px;
+        background-color: #466292;
+        color: white;
+        border: 2px solid #fff; /* Aggiunto bordo bianco */
+        border-radius: 5px;
+        font-family: 'Dosis', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease; /* Modificato per includere la transizione del bordo */
+    }
+
+    #backToHome:hover {
+        background-color: #6180b6;
+        border-color: #6180b6; /* Il bordo cambia colore durante l'hover */
+    }
+
+    #backToHome a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    #backToHome {
+        margin-top: 10px;
+        width: 200px; /* o la larghezza desiderata */
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+        color: white;
+        background-color: #466292;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+      }
+
+      #backToHome:hover {
+        background-color: #6180b6;
+        color: #fff;
+      }
+    
+}
