@@ -78,7 +78,7 @@ document.getElementById('languageSelector').addEventListener('change', function(
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         if (email == 'admin@gmail.com' && password == 'admin') {
-            window.location.href = 'admin-dashboard.html';
+            window.location.href = '../admin-file-management/admin-file-management.html';
         } else {
             // Mostra il messaggio di errore
             errorMessage.style.display = 'block';

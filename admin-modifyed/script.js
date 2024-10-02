@@ -1,7 +1,7 @@
 document.getElementById('languageSelector').addEventListener('change', function() {
     const language = this.value;
     const title = document.querySelector('.title');
-  
+
     // Oggetto con le traduzioni
     const translations = {
         'it': 'Seleziona un file',
