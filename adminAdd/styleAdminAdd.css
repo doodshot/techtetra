@@ -1,0 +1,129 @@
+@media only screen and (max-width: 768px) {
+    body {
+        font-family: 'Dosis', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bs-selmi-600);
+        color: #ffffff;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #languageSelector {
+        position: fixed;  
+        top: 20px;
+        right: 20px;
+        z-index: 1000;    
+        padding: 8px 12px;
+        font-family: 'Dosis', sans-serif;
+        font-size: 16px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0);  
+        border: 2px solid #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    #languageSelector:hover {
+        color: #6180b6;
+        border: 2px solid #6180b6;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    option{
+        color: #25344D;
+    }
+
+    body {
+        background-color: #25344D;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #25344D;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    background-color: #25344D;
+    color: white;
+    transition: background-color 0.3s ease; 
+}
+
+input[type="text"]::placeholder {
+    text-align: center;
+    color: white; 
+}
+
+input[type="text"]:hover {
+    background-color: #6180b6;
+}
+
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #25344D;
+    margin-top: -250px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    background-color: #25344D;
+    color: white;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #6180b6;
+}
+
+.container-admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
