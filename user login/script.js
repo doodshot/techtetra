@@ -52,7 +52,9 @@ var flkty = new Flickity( elem, {
   // options
   cellAlign: 'left',
   contain: true,
-  autoPlay: 1500 
+  autoPlay: 1500,
+  prevNextButtons: true,
+  pageDots: false
 });
 
 // element argument can be a selector string

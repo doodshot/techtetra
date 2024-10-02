@@ -88,6 +88,11 @@
         width: 100%;
         height: auto;
     }
+    .carousel-cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .input-field {
         width: 80%;
         padding: 10px;
@@ -96,6 +101,12 @@
         border-radius: 5px;
         background-color: var(--bs-selmi-500);
         color: #ffffff;
+
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 
     .submit-button {
