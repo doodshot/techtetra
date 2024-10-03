@@ -16,6 +16,4 @@ document.getElementById('languageSelector').addEventListener('change', function(
 
     // Imposta il testo e gli stili
     title.textContent = translations[language] || 'Select a file';
-    title.style.fontSize = '24px';
-    title.style.fontWeight = 'bold';
 });
