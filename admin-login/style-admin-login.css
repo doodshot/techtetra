@@ -5,6 +5,11 @@
         left: 20px;
         width: auto;
         height: 40px; /* Altezza simile a languageSelector */
+        transition: opacity 0.3s ease;
+    }
+
+    #logo-selmi:hover {
+        opacity: 0.8;
     }
 
     #languageSelector {
@@ -25,18 +30,21 @@
         transition: all 0.3s ease;
         height: 40px; /* Assicuriamo che l'altezza sia coerente */
         box-sizing: border-box; /* Include padding e bordo nell'altezza */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     #languageSelector:hover {
         color: #6180b6;
         border: 2px solid #6180b6;
         text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
     }
     option{
         color: #25344D;
     }
     body {
-        font-family: 'Dosis', sans-serif;
+        font-family: 'Dosis', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
         /* Rimozione dell'immagine di sfondo e aggiunta di un colore di sfondo solido */
         background-color: #25344D; /* Puoi cambiare questo colore con quello che preferisci */
         background-size: auto;
@@ -45,6 +53,7 @@
         align-items: center;      /* Centra verticalmente */
         height: 100vh;            /* Altezza completa della viewport */
         margin: 0;
+        overflow-x: hidden;
     }
     p {
         padding: 20px;
@@ -65,11 +74,21 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
+        
+        border-radius: 18px;
+        padding: 30px;
+        
     }
+
     #login img {
         width: 283px;
         height: 283px;
         margin-bottom: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    #login img:hover {
+        transform: scale(1.05);
     }
 
     #login-form {
@@ -89,6 +108,7 @@
         color: #AEAEAE;
         padding: 10px;
         box-sizing: border-box;
+        transition: all 0.3s ease;
     }
 
     #login-form input:focus,
@@ -104,6 +124,7 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
         color: #FFFFFF;
+        font-weight: 600;
     }
 
     #login-form button:hover {
@@ -134,5 +155,43 @@
         border: solid 2px #25344D;
         color: #25344D;
         border-radius: 18px;
+    }
+
+    /* Rimuovi eventuali pseudo-elementi che potrebbero causare i puntini */
+    #login::before,
+    #login::after,
+    .login-container::before,
+    .login-container::after {
+        display: none;
+    }
+
+    /* Assicurati che non ci siano bordi o decorazioni non volute */
+    #login,
+    .login-container,
+    #login img {
+        border: none;
+        text-decoration: none;
+    }
+
+    /* Rimuovi eventuali list-style che potrebbero causare puntini */
+    #login ul,
+    #login li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Assicurati che non ci siano margini o padding non voluti */
+    #login * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        display: block;
+        list-style-type: none;  /* Rimuove i punti elenco */
+        margin: 0;              /* Rimuove tutti i margini */
+        padding: 0;             /* Rimuove tutto il padding */
+        unicode-bidi: normal;   /* Ripristina il valore predefinito */
     }
 }

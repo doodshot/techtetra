@@ -10,29 +10,44 @@
 </head>
 <body>
     <header class="header">
-        <select id="languageSelector">
-            <option value="it"> IT</option>
-            <option value="en"> EN</option>
-            <option value="fr"> FR</option>
-            <option value="es"> ES</option>
-            <option value="ru"> RU</option>
-            <option value="ch"> CH</option>
-            <option value="dt"> DT</option>
-            <option value="tk"> TK</option>
-        </select>
-        <img id="logo-selmi" src="../asset/selmi-logo-mini.png" alt="logo-selmi">
+        <nav>
+            <ul>
+                <li><img id="logo-selmi" src="../asset/selmi-logo-mini.png" alt="logo-selmi"></li>
+                <li>
+                    <select id="languageSelector">
+                        <option value="it">IT</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                        <option value="es">ES</option>
+                        <option value="ru">RU</option>
+                        <option value="ch">CH</option>
+                        <option value="dt">DT</option>
+                        <option value="tk">TK</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <div id="login">
-        <img src="../asset/selmi-family.png" alt="Immagine di login">
-        <form id="login-form">
-            <input type="email" id="email" name="email" placeholder="E-mail" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <button type="submit" id="login-button">Login</button>
-        </form>
-        <a id="forgot-password" href="mailto:info@techtetra.com">Hai bisogno di assistenza?</a>
-        <p id="error-message">Credenziali sbagliate</p>
-    </div>
+    <main>
+        <section id="login">
+            <div class="login-container">
+                <img src="../asset/selmi-family.png" alt="Immagine di login" class="login-image">
+                <form id="login-form">
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="submit" id="login-button">Login</button>
+                </form>
+                <a id="forgot-password" href="mailto:info@techtetra.com">Hai bisogno di assistenza?</a>
+                <p id="error-message">Credenziali sbagliate</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Aggiungi qui eventuali informazioni per il footer -->
+    </footer>
+
     <script src="admin-login.js"></script>
 </body>
 </html>
