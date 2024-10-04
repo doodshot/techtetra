@@ -3,7 +3,7 @@
         font-family: 'Dosis', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: var(--bs-selmi-600);
+        background-color: #25344D;
         color: #ffffff;
         height: 100vh;
         display: flex;
@@ -50,7 +50,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
 
 .input-container {
@@ -103,19 +102,37 @@ input[type="text"]:hover {
     margin-top: -250px;
 }
 
-button {
+.file-input-labels {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 300px;
-    text-align: center;
     background-color: #25344D;
     color: white;
     transition: background-color 0.3s ease; 
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
 }
 
-button:hover {
+.file-input-labels input[type="file"] {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-input-labels::before {
+    display: inline-block;
+    width: 100%;
+}
+
+div .file-input-labels:hover {
     background-color: #6180b6;
 }
 
@@ -127,3 +144,25 @@ button:hover {
     height: 100vh;
 }
 
+div .file-input-labels:hover{
+    background-color: #6180b6;
+}
+
+.btn {
+    width: 200px; /* o la larghezza desiderata */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: white;
+    background-color: #466292;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 2px solid white; 
+}
+
+  .btn:hover {
+    background-color: #6180b6;
+    color: #fff;
+    border-color: #fff; /* Aggiornato il colore del bordo al passaggio del mouse */
+  }
