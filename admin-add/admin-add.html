@@ -22,24 +22,13 @@
         </select>
     </header>
 <div class="container-admin">
-    <div class="container">
+    
         <div class="input-container">
             <input type="text" id="inputName" placeholder="Nome Macchina">
             <input type="text" id="inputProductionYear" placeholder="Anno di Produzione">
+            <input type="file" id="fileInput1" accept=".pdf"  placeholder="Carica PDF Italiano">
+            <input type="file" id="fileInput2" accept=".pdf"  placeholder="Carica PDF Inglese">
         </div>
-    </div>
-    <div class="buttons-container">
-        <div class="button-container">
-            <div class="file-input-labels">
-                <label for="fileInput1">Carica PDF Italiano</label>
-                <input type="file" id="fileInput1" accept=".pdf" class="btn">
-            </div>
-            <div class="file-input-labels">
-                <label for="fileInput2">Carica PDF Inglese</label>
-                <input type="file" id="fileInput2" accept=".pdf" class="btn">
-            </div>
-        </div>
-    </div> 
     <button id="sendButton" class="btn">Invia</button> 
 </div> 
     <script src="admin-add.js"></script>
