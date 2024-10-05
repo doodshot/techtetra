@@ -4,8 +4,6 @@ document.getElementById('languageSelector').addEventListener('change', function(
         const password = document.getElementById('password');
         const loginButton = document.getElementById('login-button');
         const forgotPassword = document.getElementById('forgot-password');
-        
-
         if (language === 'it') {
           email.placeholder = 'Email';
           password.placeholder = 'Password';

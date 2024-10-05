@@ -26,8 +26,14 @@
         <div class="input-container">
             <input type="text" id="inputName" placeholder="Nome Macchina">
             <input type="text" id="inputProductionYear" placeholder="Anno di Produzione">
-            <input type="file" id="fileInput1" accept=".pdf"  placeholder="Carica PDF Italiano">
-            <input type="file" id="fileInput2" accept=".pdf"  placeholder="Carica PDF Inglese">
+            <div class="file-input-wrapper">
+                <input type="file" id="fileInput1" accept=".pdf" class="file-input">
+                <span class="file-name" id="fileName1">Carica il file in Italiano</span>
+            </div>
+            <div class="file-input-wrapper">
+                <input type="file" id="fileInput2" accept=".pdf" class="file-input">
+                <span class="file-name" id="fileName2">Carica il file in Inglese</span>
+            </div>
         </div>
     <button id="sendButton" class="btn">Invia</button> 
 </div> 

@@ -119,3 +119,30 @@ input[type="file"]:hover {
     color: #fff;
     border-color: #fff; /* Aggiornato il colore del bordo al passaggio del mouse */
   }
+
+.file-input-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+
+.file-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-name {
+    margin-left: 10px;
+    font-size: 16px;
+}
