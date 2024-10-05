@@ -29,7 +29,18 @@
         text-align: center;
         transition: all 0.3s ease;
     }
-
+    .home-collegamento {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .home-collegamento img {
+        transition: transform 0.3s ease;
+    }
+    
+    .home-collegamento img:hover {
+        transform: scale(1.1);
+    }
+    
     #languageSelector:hover {
         color: #6180b6;
         border: 2px solid #6180b6;
