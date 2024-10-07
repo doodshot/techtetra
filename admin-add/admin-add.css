@@ -29,7 +29,18 @@
         text-align: center;
         transition: all 0.3s ease;
     }
-
+    .home-collegamento {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .home-collegamento img {
+        transition: transform 0.3s ease;
+    }
+    
+    .home-collegamento img:hover {
+        transform: scale(1.1);
+    }
+    
     #languageSelector:hover {
         color: #6180b6;
         border: 2px solid #6180b6;
@@ -44,14 +55,13 @@
         background-color: #25344D;
     }
 }
-
-.container {
+.container-admin{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-
 .input-container {
     display: flex;
     flex-direction: column;
@@ -60,8 +70,8 @@
     border: 2px solid white;
     border-radius: 10px;
     background-color: #25344D;
+    margin-bottom: 42px;
 }
-
 input[type="text"] {
     padding: 10px;
     font-size: 16px;
@@ -82,72 +92,26 @@ input[type="text"]::placeholder {
 input[type="text"]:hover {
     background-color: #6180b6;
 }
-
-
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 40px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: #25344D;
-    margin-top: -250px;
-}
-
-.file-input-labels {
+input[type="file"] {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 300px;
+    text-align: center;
     background-color: #25344D;
     color: white;
     transition: background-color 0.3s ease; 
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
+}
+
+input[type="file"]::placeholder {
     text-align: center;
-    cursor: pointer;
+    color: white; 
 }
 
-.file-input-labels input[type="file"] {
-    position: absolute;
-    font-size: 100px;
-    right: 0;
-    top: 0;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.file-input-labels::before {
-    display: inline-block;
-    width: 100%;
-}
-
-div .file-input-labels:hover {
+input[type="file"]:hover {
     background-color: #6180b6;
 }
-
-.container-admin{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-div .file-input-labels:hover{
-    background-color: #6180b6;
-}
-
 .btn {
     width: 200px; /* o la larghezza desiderata */
     padding: 20px;
@@ -166,3 +130,30 @@ div .file-input-labels:hover{
     color: #fff;
     border-color: #fff; /* Aggiornato il colore del bordo al passaggio del mouse */
   }
+
+.file-input-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+
+.file-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-name {
+    margin-left: 10px;
+    font-size: 16px;
+}
