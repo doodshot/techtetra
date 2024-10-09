@@ -30,11 +30,13 @@
         transition: all 0.3s ease;
     }
     .home-collegamento {
-        margin-top: 10px;
-        margin-left: 20px;
+        margin-top: 20px;
+        margin-left: 30px;
     }
     .home-collegamento img {
         transition: transform 0.3s ease;
+        width: 40px;
+        height: 40px;
     }
     
     .home-collegamento img:hover {
@@ -65,8 +67,8 @@
 .input-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 30px;
+    gap: 40px;
+    padding: 50px;
     border: 2px solid white;
     border-radius: 10px;
     background-color: #25344D;
