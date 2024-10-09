@@ -1,0 +1,169 @@
+@media screen and (max-width: 768px) {
+    body {
+        font-family: 'Dosis', sans-serif;
+        font-size: 20px;
+        background-color: #1e2c3a;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Aumentare le dimensioni del box e del button */
+    .upload-box {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .modify-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px 20px; /* Aumento del padding per il bottone */
+        font-size: 18px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e2c3a;
+    color: white;
+    margin: 0;
+    padding: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.upload-box {
+    width: 300px; /* Aumento dimensioni */
+    height: 300px; /* Aumento dimensioni */
+    background-color: #3a4b5c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto 20px;
+}
+
+.upload-box p {
+    margin: 0;
+    font-size: 24px;
+}
+
+.upload-box img {
+    width: 80px;  /* Aumento della dimensione dell'immagine */
+    height: 80px;
+    margin-top: 10px;
+}
+
+.modify-btn {
+    background-color: #3a4b5c;
+    color: white;
+    border: none;
+    padding: 15px 20px; /* Aumento del padding per maggiore usabilità */
+    font-size: 18px; /* Font più grande */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modify-btn:hover {
+    background-color: #4a5b6c;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(30, 44, 58, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.logo-image img {
+    height: 30px;
+    width: auto;
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 40px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.language-selector select:hover {
+    color: #6180b6;
+    border: 2px solid #6180b6;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-selector option {
+    color: #25344D;
+}
+
+/* Aggiusta il padding del body per fare spazio all'header */
+body {
+    padding-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Stili per mobile */
+
+    header {
+        padding: 10px;
+    }
+
+    .home-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .language-selector select {
+        font-size: 14px;
+    }
+}
