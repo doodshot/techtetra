@@ -1,0 +1,25 @@
+@media only screen and (max-width: 768px) {
+    body {
+        font-family: 'Dosis', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+        /* Rimozione dell'immagine di sfondo e aggiunta di un colore di sfondo solido */
+        background-color: #25344D; /* Puoi cambiare questo colore con quello che preferisci */
+        background-size: auto;
+        display: flex;
+        justify-content: center;  /* Centra orizzontalmente */
+        align-items: center;      /* Centra verticalmente */
+        height: 100vh;            /* Altezza completa della viewport */
+        margin: 0;
+        overflow-x: hidden;
+    }
+    #main {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 50px;
+        border: 2px solid white;
+        border-radius: 10px;
+        background-color: #25344D;
+        margin-bottom: 42px;
+    }
+    }
