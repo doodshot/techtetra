@@ -1,123 +1,189 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const uploadBox = document.getElementById('uploadBox');
-    const fileInput = document.getElementById('fileInput');
-    const languageSelector = document.getElementById('languageSelector');
-    const pageTitle = document.querySelector('h1');
-    const uploadText = document.querySelector('.upload-box p');
-    const modifyButton = document.querySelector('.modify-btn');
+    const inputProductionYear = document.getElementById('inputProductionYear');
+    
+    inputProductionYear.addEventListener('input', function(e) {
+        // Rimuove tutti i caratteri non numerici
+        let value = this.value.replace(/\D/g, '');
+        
+        // Limita a 4 cifre
+        value = value.slice(0, 4);
+        
+        // Aggiorna il valore del campo
+        this.value = value;
+    });
+});
 
-    // Funzione per cambiare la lingua
-    function changeLanguage(language) {
-        let texts = {
-            title: '',
-            uploadText: '',
-            modifyButton: '',
-            alertMessage: ''
-        };
-
-        switch(language.toLowerCase()) {
-            case 'it':
-                texts = {
-                    title: 'Inserisci il nuovo PDF',
-                    uploadText: 'PDF',
-                    modifyButton: 'modifica',
-                    alertMessage: 'Per favore, seleziona un file PDF valido.'
-                };
-                break;
-            case 'en':
-                texts = {
-                    title: 'Insert new PDF',
-                    uploadText: 'PDF',
-                    modifyButton: 'modify',
-                    alertMessage: 'Please select a valid PDF file.'
-                };
-                break;
-            case 'fr':
-                texts = {
-                    title: 'Insérez le nouveau PDF',
-                    uploadText: 'PDF',
-                    modifyButton: 'modifier',
-                    alertMessage: 'Veuillez sélectionner un fichier PDF valide.'
-                };
-                break;
-            case 'es':
-                texts = {
-                    title: 'Inserta el nuevo PDF',
-                    uploadText: 'PDF',
-                    modifyButton: 'modificar',
-                    alertMessage: 'Por favor, selecciona un archivo PDF válido.'
-                };
-                break;
-            case 'ru':
-                texts = {
-                    title: 'Вставьте новый PDF',
-                    uploadText: 'PDF',
-                    modifyButton: 'изменить',
-                    alertMessage: 'Пожалуйста, выберите действительный файл PDF.'
-                };
-                break;
-            case 'ch':
-                texts = {
-                    title: '插入新的PDF',
-                    uploadText: 'PDF',
-                    modifyButton: '修改',
-                    alertMessage: '请选择有效的PDF文件。'
-                };
-                break;
-            case 'dt':
-                texts = {
-                    title: 'Neues PDF einfügen',
-                    uploadText: 'PDF',
-                    modifyButton: 'ändern',
-                    alertMessage: 'Bitte wählen Sie eine gültige PDF-Datei aus.'
-                };
-                break;
-            case 'tk':
-                texts = {
-                    title: 'Yeni PDF ekle',
-                    uploadText: 'PDF',
-                    modifyButton: 'değiştir',
-                    alertMessage: 'Lütfen geçerli bir PDF dosyası seçin.'
-                };
-                break;
-            default:
-                texts = {
-                    title: 'Insert new PDF',
-                    uploadText: 'PDF',
-                    modifyButton: 'modify',
-                    alertMessage: 'Please select a valid PDF file.'
-                };
-        }
-
-        pageTitle.textContent = texts.title;
-        uploadText.textContent = texts.uploadText;
-        modifyButton.textContent = texts.modifyButton;
-        window.alertMessage = texts.alertMessage;
-    }
-
-    // Evento per il cambio lingua
-    languageSelector.addEventListener('change', function() {
-        const language = this.value;
+document.getElementById('languageSelector').addEventListener('change', function() {
+    const language = this.value;
+    const btn = document.getElementById('sendButton');
+    const inputName = document.getElementById('inputName');
+    const inputProductionYear = document.getElementById('inputProductionYear');
+    const fileName1 = document.getElementById('fileName1');
+    const fileName2 = document.getElementById('fileName2');
+    const title = document.getElementById('title');
+    
+    if (language === 'it') {
         localStorage.setItem('language', language);
-        changeLanguage(language);
-    });
+        btn.textContent = 'Invia';
+        inputName.placeholder = 'Nome Macchina';
+        inputProductionYear.placeholder = 'Anno di Produzione';
+        fileName1.textContent = 'Carica PDF Italiano';
+        fileName2.textContent = 'Carica PDF Inglese';
+        title.textContent = 'Modifica Macchina';
+    }
+    else if (language === 'en') {
+        localStorage.setItem('language', language);
+        btn.textContent = 'Send';
+        inputName.placeholder = 'Machine Name';
+        inputProductionYear.placeholder = 'Production Year';
+        fileName1.textContent = 'Upload Italian PDF';
+        fileName2.textContent = 'Upload English PDF';
+        title.textContent = 'Modify Machine';
+    }
+    else if(language === 'fr') {
+        localStorage.setItem('language', language);
+        btn.textContent = 'Envoyer';
+        inputName.placeholder = 'Nom de la machine';
+        inputProductionYear.placeholder = 'Année de production';
+        fileName1.textContent = 'Télécharger le PDF en français';
+        fileName2.textContent = 'Télécharger le PDF en anglais';
+        title.textContent = 'Modifier la machine';
+    }
+    else if(language === 'es') {
+        localStorage.setItem('language', language);
+        btn.textContent = 'Enviar';
+        inputName.placeholder = 'Nombre de la máquina';
+        inputProductionYear.placeholder = 'Año de producción';
+        fileName1.textContent = 'Subir PDF en español';
+        fileName2.textContent = 'Subir PDF en inglés';
+        title.textContent = 'Modificar máquina';
+    }
+    else if(language === 'ru')
+    {
+        localStorage.setItem('language', language);
+        btn.textContent = 'Отправить';
+        inputName.placeholder = 'Название машины';
+        inputProductionYear.placeholder = 'Год производства';
+        fileName1.textContent = 'Загрузить PDF на русском';
+        fileName2.textContent = 'Загрузить PDF на английском';
+        title.textContent = 'Изменить машину';
+    }
+    else if(language === 'ch')
+    {
+        localStorage.setItem('language', language);
+        btn.textContent = '发送';
+        inputName.placeholder = '机器名称';
+        inputProductionYear.placeholder = '生产年份';
+        fileName1.textContent = '上传中文PDF';
+        fileName2.textContent = '上传英文PDF';
+        title.textContent = '修改机器';
+    }
+    else if(language === 'dt')
+    {
+        localStorage.setItem('language', language);
+        btn.textContent = 'Senden';
+        inputName.placeholder = 'Maschinenname';
+        inputProductionYear.placeholder = 'Produktionsjahr';
+        fileName1.textContent = 'Deutsch PDF hochladen';
+        fileName2.textContent = 'Englisch PDF hochladen';
+        title.textContent = 'Maschine ändern';
+    }
+    else if(language === 'tk')
+    {
+        localStorage.setItem('language', language);
+        btn.textContent = 'Göndər';
+        inputName.placeholder = 'Mashinanın adı';
+        inputProductionYear.placeholder = 'İstehsal ili';
+        fileName1.textContent = 'Azərbaycanca PDF yüklə';
+        fileName2.textContent = 'Ingiliscə PDF yüklə';
+        title.textContent = 'Maşını dəyişdir';
+    }
+});
 
-    // Carica la lingua salvata o usa l'italiano come default
-    const savedLanguage = localStorage.getItem('language') || 'it';
-    languageSelector.value = savedLanguage;
-    changeLanguage(savedLanguage);
+//funzione cambio lingua
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('language');
+    const btn = document.getElementById('sendButton');
+    const inputName = document.getElementById('inputName');
+    const inputProductionYear = document.getElementById('inputProductionYear');
+    const fileInput1 = document.getElementById('fileInput1');
+    const fileInput2 = document.getElementById('fileInput2');
+    const title = document.getElementById('title');
+    
+    if (savedLanguage === 'it') {
+        btn.textContent = 'Invia';
+        inputName.placeholder = 'Nome Macchina';
+        inputProductionYear.placeholder = 'Anno di Produzione';
+        fileInput1.placeholder = 'Carica PDF Italiano';
+        fileInput2.placeholder = 'Carica PDF Inglese';
+        title.textContent = 'Modifica Macchina';
+    } else if (savedLanguage === 'en') {
+        btn.textContent = 'Send';
+        inputName.placeholder = 'Machine Name';
+        inputProductionYear.placeholder = 'Production Year';
+        fileInput1.placeholder = 'Upload Italian PDF';
+        fileInput2.placeholder = 'Upload English PDF';
+        title.textContent = 'Modify Machine';
+    } else if (savedLanguage === 'fr') {
+        btn.textContent = 'Envoyer';
+        inputName.placeholder = 'Nom de la machine';
+        inputProductionYear.placeholder = 'Année de production';
+        fileInput1.placeholder = 'Télécharger le PDF en français';
+        fileInput2.placeholder = 'Télécharger le PDF en anglais';
+        title.textContent = 'Modifier la machine';
+    }
+    else if(savedLanguage === 'es') {
+        btn.textContent = 'Enviar';
+        inputName.placeholder = 'Nombre de la máquina';
+        inputProductionYear.placeholder = 'Año de producción';
+        fileInput1.placeholder = 'Subir PDF en español';
+        fileInput2.placeholder = 'Subir PDF en inglés';
+        title.textContent = 'Modificar máquina';
+    }
+    else if(savedLanguage === 'ru')
+    {
+        btn.textContent = 'Отправить';
+        inputName.placeholder = 'Название машины';
+        inputProductionYear.placeholder = 'Год производства';
+        fileInput1.placeholder = 'Загрузить PDF на русском';
+        fileInput2.placeholder = 'Загрузить PDF на английском';
+        title.textContent = 'Изменить машину';
+    }
+    else if(savedLanguage === 'ch')
+    {
+        btn.textContent = '发送';
+        inputName.placeholder = '机器名称';
+        inputProductionYear.placeholder = '生产年份';
+        fileInput1.placeholder = '上传中文PDF';
+        fileInput2.placeholder = '上传英文PDF';
+        title.textContent = '修改机器';
+    }
+    else if(savedLanguage === 'dt')
+    {
+        btn.textContent = 'Senden';
+        inputName.placeholder = 'Maschinenname';
+        inputProductionYear.placeholder = 'Produktionsjahr';
+        fileInput1.placeholder = 'Deutsch PDF hochladen';
+        fileInput2.placeholder = 'Englisch PDF hochladen';
+        title.textContent = 'Maschine ändern';
+    }
+    else if(savedLanguage === 'tk')
+    {
+        btn.textContent = 'Göndər';
+        inputName.placeholder = 'Mashinanın adı';
+        inputProductionYear.placeholder = 'İstehsal ili';
+        fileInput1.placeholder = 'Azərbaycanca PDF yüklə';
+        fileInput2.placeholder = 'Ingiliscə PDF yüklə';
+        title.textContent = 'Maşını dəyişdir';
+    }
+});
 
-    uploadBox.addEventListener('click', function() {
-        fileInput.click();
-    });
+document.getElementById('fileInput1').addEventListener('change', function(e) {
+    var fileName = e.target.files[0] ? e.target.files[0].name : 'Nessun file selezionato';
+    document.getElementById('fileName1').textContent = fileName;
+});
 
-    fileInput.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file && file.type === 'application/pdf') {
-            console.log('File PDF selezionato:', file.name);
-            // Qui puoi aggiungere la logica per gestire il file selezionato
-        } else {
-            alert(window.alertMessage);
-        }
-    });
+document.getElementById('fileInput2').addEventListener('change', function(e) {
+    var fileName = e.target.files[0] ? e.target.files[0].name : 'Nessun file selezionato';
+    document.getElementById('fileName2').textContent = fileName;
 });

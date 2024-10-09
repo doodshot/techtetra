@@ -72,57 +72,7 @@ document.getElementById('languageSelector').addEventListener('change', function(
         }
       });
 
-    //funzione per il login
-    const errorMessage = document.getElementById('error-message');
     
-    // Nascondi il messaggio di errore all'inizio
-    errorMessage.style.display = 'none';
-    
-    document.getElementById('login-button').addEventListener('click', function(e) {
-        e.preventDefault();
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        if (email == 'admin@gmail.com' && password == 'admin') {
-            window.location.href = '../admin-file-management/admin-file-management.html';
-        } else {
-            // Mostra il messaggio di errore
-            errorMessage.style.display = 'block';
-            errorMessage.style.color = 'red';
-            errorMessage.style.padding = '8px';
-            errorMessage.style.border = '1px solid red';
-            errorMessage.style.borderRadius = '10px';
-            errorMessage.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
-            // Imposta il testo del messaggio di errore in base alla lingua
-            switch(language) {
-                case 'it':
-                    errorMessage.textContent = 'Credenziali Sbagliate';
-                    break;
-                case 'en':
-                    errorMessage.textContent = 'Wrong Credentials';
-                    break;
-                case 'fr':
-                    errorMessage.textContent = 'Mauvaises Credentials';
-                    break;
-                case 'es':
-                    errorMessage.textContent = 'Credenciales Incorrectas';
-                    break;
-                case 'ru':
-                    errorMessage.textContent = 'Неверные учетные данные';
-                    break;
-                case 'ch':
-                    errorMessage.textContent = '错误的凭证';
-                    break;
-                case 'dt':
-                    errorMessage.textContent = 'Falsche Anmeldeinformationen';
-                    break;
-                case 'tk':
-                    errorMessage.textContent = 'Yanlış kimlik bilgileri';
-                    break;
-                default:
-                    errorMessage.textContent = 'Wrong Credentials';
-            }
-        }
-    });
 
     //funzione cambio lingua
     document.addEventListener('DOMContentLoaded', function() {
@@ -196,5 +146,57 @@ document.getElementById('languageSelector').addEventListener('change', function(
             forgotPassword.textContent = 'Yardıma ihtiyacınız var mı?';
             errorMessage.textContent = 'Yanlış kimlik bilgileri';
             option.textContent = 'TK';
+        }
+    });
+    
+    //funzione per il login
+    const errorMessage = document.getElementById('error-message');
+    
+    // Nascondi il messaggio di errore all'inizio
+    errorMessage.style.display = 'none';
+    
+    document.getElementById('login-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if (email == 'admin@gmail.com' && password == 'admin') {
+            window.location.href = '../admin-file-management/admin-file-management.html';
+        } else {
+            // Mostra il messaggio di errore
+            errorMessage.style.display = 'block';
+            errorMessage.style.color = 'red';
+            errorMessage.style.padding = '8px';
+            errorMessage.style.border = '1px solid red';
+            errorMessage.style.borderRadius = '10px';
+            errorMessage.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+            // Imposta il testo del messaggio di errore in base alla lingua
+            switch(language) {
+                case 'it':
+                    errorMessage.textContent = 'Credenziali Sbagliate';
+                    break;
+                case 'en':
+                    errorMessage.textContent = 'Wrong Credentials';
+                    break;
+                case 'fr':
+                    errorMessage.textContent = 'Mauvaises Credentials';
+                    break;
+                case 'es':
+                    errorMessage.textContent = 'Credenciales Incorrectas';
+                    break;
+                case 'ru':
+                    errorMessage.textContent = 'Неверные учетные данные';
+                    break;
+                case 'ch':
+                    errorMessage.textContent = '错误的凭证';
+                    break;
+                case 'dt':
+                    errorMessage.textContent = 'Falsche Anmeldeinformationen';
+                    break;
+                case 'tk':
+                    errorMessage.textContent = 'Yanlış kimlik bilgileri';
+                    break;
+                default:
+                    errorMessage.textContent = 'Wrong Credentials';
+            }
         }
     });

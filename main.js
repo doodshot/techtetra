@@ -47,3 +47,5 @@ document.getElementById('languageSelector').addEventListener('change', function(
       adminLink.textContent = 'Yönetici misiniz?';
     }
   });
+
+   

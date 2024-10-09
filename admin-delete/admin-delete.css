@@ -11,11 +11,10 @@
         min-height: 100vh;
     }
 
-    .logo-image {
-        width: auto;
-        height: 50px;
-        margin-bottom: 20px;
-        object-fit: contain;
+    #home-icon img {
+        transition: transform 0.3s ease;
+        width: 40px;
+        height: 40px;
     }
 
     .file-list {
