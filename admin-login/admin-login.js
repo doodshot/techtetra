@@ -5,14 +5,14 @@ document.getElementById('languageSelector').addEventListener('change', function(
         const loginButton = document.getElementById('login-button');
         const forgotPassword = document.getElementById('forgot-password');
         if (language === 'it') {
-        localStorage.setItem('language', language);
+          localStorage.setItem('language', language);
           email.placeholder = 'Email';
           password.placeholder = 'Password';
           loginButton.textContent = 'Login';
           forgotPassword.textContent = 'Hai bisogno di assistenza?';
           errorMessage.textContent = 'Credenziali Sbagliate';
         } else if (language === 'en') {
-        localStorage.setItem('language', language);
+          localStorage.setItem('language', language);
           email.placeholder = 'Email';
           password.placeholder = 'Password';
           loginButton.textContent = 'Login';
@@ -71,6 +71,7 @@ document.getElementById('languageSelector').addEventListener('change', function(
           errorMessage.textContent = 'Yanlış kimlik bilgileri';
         }
       });
+
     //funzione per il login
     const errorMessage = document.getElementById('error-message');
     
@@ -122,6 +123,8 @@ document.getElementById('languageSelector').addEventListener('change', function(
             }
         }
     });
+
+    //funzione cambio lingua
     document.addEventListener('DOMContentLoaded', function() {
         const savedLanguage = localStorage.getItem('language');
         const email = document.getElementById('email');
@@ -134,18 +137,21 @@ document.getElementById('languageSelector').addEventListener('change', function(
             loginButton.textContent = 'Login';
             forgotPassword.textContent = 'Hai bisogno di assistenza?';
             errorMessage.textContent = 'Credenziali Sbagliate';
+            option.textContent = 'IT';
         } else if (savedLanguage === 'en') {
             email.placeholder = 'Email';
             password.placeholder = 'Password';
             loginButton.textContent = 'Login';
             forgotPassword.textContent = 'Do you need assistance?';
             errorMessage.textContent = 'Wrong Credentials';
+            option.textContent = 'EN';
         } else if (savedLanguage === 'fr') {
             email.placeholder = 'Email';
             password.placeholder = 'Password';
             loginButton.textContent = 'Login';
             forgotPassword.textContent = 'Avez-vous besoin d\'aide?';
             errorMessage.textContent = 'Mauvaises Credentials';
+            option.textContent = 'FR';
         }
         else if(savedLanguage === 'es') {
             email.placeholder = 'Email';
@@ -153,7 +159,8 @@ document.getElementById('languageSelector').addEventListener('change', function(
             loginButton.textContent = 'Login';
             forgotPassword.textContent = '¿Necesitas ayuda?';
             errorMessage.textContent = 'Credenciales Incorrectas';
-        }
+            option.textContent = 'ES';
+            }
         else if(savedLanguage === 'ru')
         {
             email.placeholder = 'электронная почта';
@@ -161,6 +168,7 @@ document.getElementById('languageSelector').addEventListener('change', function(
             loginButton.textContent = 'авторизоваться';
             forgotPassword.textContent = 'Вам нужна помощь?';
             errorMessage.textContent = 'Неверные учетные данные';
+            option.textContent = 'RU';
         }
         else if(savedLanguage === 'ch')
         {
@@ -169,6 +177,7 @@ document.getElementById('languageSelector').addEventListener('change', function(
             loginButton.textContent = '登录';
             forgotPassword.textContent = '你需要帮助吗？';
             errorMessage.textContent = '错误的凭证';
+            option.textContent = 'CH';
         }
         else if(savedLanguage === 'dt')
         {
@@ -177,6 +186,7 @@ document.getElementById('languageSelector').addEventListener('change', function(
             loginButton.textContent = 'Login';
             forgotPassword.textContent = 'Benötigen Sie Hilfe?';
             errorMessage.textContent = 'Falsche Anmeldeinformationen';
+            option.textContent = 'DT';
         }
         else if(savedLanguage === 'tk')
         {
@@ -185,5 +195,6 @@ document.getElementById('languageSelector').addEventListener('change', function(
             loginButton.textContent = 'Giriş';
             forgotPassword.textContent = 'Yardıma ihtiyacınız var mı?';
             errorMessage.textContent = 'Yanlış kimlik bilgileri';
+            option.textContent = 'TK';
         }
     });
