@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserisci il nuovo PDF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-image">
+            <img src="../asset/logoselmi.png" alt="Logo Home">
+        </a>
+        <div class="language-selector">
+            <select id="languageSelector">
+                <option value="it">IT</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="dt">DT</option>
+                <option value="es">ES</option>
+                <option value="ch">CH</option>
+                <option value="ru">RU</option>
+                <option value="tk">TK</option>
+            </select>
+        </div>
+    </header>
+    <div class="container">
+        <h1 id="pageTitle">Inserisci il nuovo PDF</h1>
+        <div class="upload-box" id="uploadBox">
+            <p id="uploadText">PDF</p>
+            <img src="..\asset/pdf-icon.png" alt="PDF Icon">
+            <input type="file" id="fileInput" accept=".pdf" hidden>
+        </div>
+        <button class="modify-btn" id="modifyButton">Modifica</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
